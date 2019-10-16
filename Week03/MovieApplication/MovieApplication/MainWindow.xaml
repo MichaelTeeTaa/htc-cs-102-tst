@@ -18,7 +18,7 @@
         <Label x:Name="label" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label x:Name="Review_Score" Content="Review Score" HorizontalAlignment="Left" Margin="367,75,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="reviewScoreTextBox" HorizontalAlignment="Left" Height="23" Margin="351,101,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="209,197,0,0" VerticalAlignment="Top" Width="75" Click="submitMovieButton_Click"/>
+        <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="210,197,0,0" VerticalAlignment="Top" Width="75" Click="submitMovieButton_Click"/>
 
     </Grid>
 </Window>
