@@ -5,20 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MovieApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="450.696" Width="646.671">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <ToolBar x:Name="toolBar" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Height="23" Margin="24,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="titleLabel" Content="Title" HorizontalAlignment="Left" Margin="66,75,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.797,1.249"/>
-        <Label x:Name="Genre" Content="Genre" HorizontalAlignment="Left" Margin="223,75,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="genreTextBox" HorizontalAlignment="Left" Height="23" Margin="185,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="genreTextBox_TextChanged"/>
-        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Label x:Name="Review_Score" Content="Review Score" HorizontalAlignment="Left" Margin="367,75,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="reviewScoreTextBox" HorizontalAlignment="Left" Height="23" Margin="351,101,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="210,197,0,0" VerticalAlignment="Top" Width="75" Click="submitMovieButton_Click"/>
+        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Height="25" Margin="69,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"/>
+        <Label x:Name="titleLabel" Content="Title" HorizontalAlignment="Left" Margin="96,311,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.797,1.249" FontSize="9"/>
+        <Label x:Name="Genre" Content="Genre" HorizontalAlignment="Left" Margin="278,311,0,0" VerticalAlignment="Top" Width="49" FontSize="9"/>
+        <TextBox x:Name="genreTextBox" HorizontalAlignment="Left" Height="25" Margin="263,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" TextChanged="genreTextBox_TextChanged"/>
+        <Label x:Name="Review_Score" Content="Review Score" HorizontalAlignment="Left" Margin="439,311,0,0" VerticalAlignment="Top" Height="25" Width="83" FontSize="9"/>
+        <TextBox x:Name="reviewScoreTextBox" HorizontalAlignment="Left" Height="25" Margin="426,333,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="93" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.146"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="538,364,0,0" VerticalAlignment="Top" Width="55" Click="submitMovieButton_Click" Height="24" FontSize="8"/>
+        <ListView x:Name="movieListView" HorizontalAlignment="Left" Height="228" Margin="85,41,0,0" VerticalAlignment="Top" Width="451">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="150" Header="Title" DisplayMemberBinding="{Binding Title}"></GridViewColumn>
+                    <GridViewColumn Width="100" Header="Genre" DisplayMemberBinding="{Binding Title}"></GridViewColumn>
+                    <GridViewColumn Width="100" Header="Review Score" DisplayMemberBinding="{Binding Title}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>
