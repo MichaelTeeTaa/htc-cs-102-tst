@@ -27,12 +27,12 @@
             </TextBox.RenderTransform>
         </TextBox>
         <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="538,364,0,0" VerticalAlignment="Top" Width="55" Click="submitMovieButton_Click" Height="24" FontSize="8"/>
-        <ListView x:Name="movieListView" HorizontalAlignment="Left" Height="228" Margin="85,41,0,0" VerticalAlignment="Top" Width="451">
+        <ListView x:Name="movieListView" HorizontalAlignment="Left" Height="228" Margin="85,41,0,0" VerticalAlignment="Top" Width="451" MouseDoubleClick="movieListView_MouseDoubleClick"> 
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="150" Header="Title" DisplayMemberBinding="{Binding Title}"></GridViewColumn>
-                    <GridViewColumn Width="100" Header="Genre" DisplayMemberBinding="{Binding Title}"></GridViewColumn>
-                    <GridViewColumn Width="100" Header="Review Score" DisplayMemberBinding="{Binding Title}"></GridViewColumn>
+                    <GridViewColumn Width="100" Header="Genre" DisplayMemberBinding="{Binding Genre}"></GridViewColumn>
+                    <GridViewColumn Width="100" Header="Review Score" DisplayMemberBinding="{Binding ReviewScore}"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
