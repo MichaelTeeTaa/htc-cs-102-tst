@@ -42,7 +42,10 @@ namespace MovieApplication
 
             Movie submittedMovie = new Movie(titleTextBox.Text,    
                                             genreTextBox.Text, 
-                                            Double.Parse(reviewScoreTextBox.Text));
+                                            Double.Parse(reviewScoreTextBox.Text),
+                                            directorTextBox.Text,
+                                            int.Parse(lengthTextBox.Text),
+                                            numberOfActorsTextBox.Text);
 
             movieList.Add(submittedMovie);
             //submittedMovie.Title = titleTextBox.Text;
@@ -56,8 +59,12 @@ namespace MovieApplication
             titleTextBox.Clear();
             genreTextBox.Clear();
             reviewScoreTextBox.Clear();
+            directorTextBox.Clear();
+            lengthTextBox.Clear();
+            numberOfActorsTextBox.Clear();
 
-           
+
+
         }
 
         private void movieListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -65,6 +72,11 @@ namespace MovieApplication
             Movie selectedMovie = movieListView.SelectedItem as Movie;
 
             selectedMovie.DisplayInformation();
+        }
+
+        private void movieListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

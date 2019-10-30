@@ -11,12 +11,12 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <ToolBar x:Name="toolBar" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Height="25" Margin="69,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"/>
-        <Label x:Name="titleLabel" Content="Title" HorizontalAlignment="Left" Margin="96,311,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.797,1.249" FontSize="9"/>
-        <Label x:Name="Genre" Content="Genre" HorizontalAlignment="Left" Margin="278,311,0,0" VerticalAlignment="Top" Width="49" FontSize="9"/>
-        <TextBox x:Name="genreTextBox" HorizontalAlignment="Left" Height="25" Margin="263,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" TextChanged="genreTextBox_TextChanged"/>
-        <Label x:Name="Review_Score" Content="Review Score" HorizontalAlignment="Left" Margin="439,311,0,0" VerticalAlignment="Top" Height="25" Width="83" FontSize="9"/>
-        <TextBox x:Name="reviewScoreTextBox" HorizontalAlignment="Left" Height="25" Margin="426,333,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="93" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Height="25" Margin="20,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"/>
+        <Label x:Name="titleLabel" Content="Title" HorizontalAlignment="Left" Margin="51,315,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.797,1.249" FontSize="9"/>
+        <Label x:Name="Genre" Content="Genre" HorizontalAlignment="Left" Margin="141,317,0,0" VerticalAlignment="Top" Width="49" FontSize="9"/>
+        <TextBox x:Name="genreTextBox" HorizontalAlignment="Left" Height="25" Margin="113,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" TextChanged="genreTextBox_TextChanged"/>
+        <Label x:Name="Review_Score" Content="Review Score" HorizontalAlignment="Left" Margin="224,317,0,0" VerticalAlignment="Top" Height="25" Width="83" FontSize="9"/>
+        <TextBox x:Name="reviewScoreTextBox" HorizontalAlignment="Left" Height="25" Margin="208,343,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="93" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -26,16 +26,25 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="538,364,0,0" VerticalAlignment="Top" Width="55" Click="submitMovieButton_Click" Height="24" FontSize="8"/>
-        <ListView x:Name="movieListView" HorizontalAlignment="Left" Height="228" Margin="85,41,0,0" VerticalAlignment="Top" Width="451" MouseDoubleClick="movieListView_MouseDoubleClick"> 
+        <Button x:Name="submitMovieButton" Content="Submit" HorizontalAlignment="Left" Margin="377,375,0,0" VerticalAlignment="Top" Width="55" Click="submitMovieButton_Click" Height="24" FontSize="8"/>
+        <ListView x:Name="movieListView" HorizontalAlignment="Left" Height="228" Margin="-16,41,-2,0" VerticalAlignment="Top" Width="657" MouseDoubleClick="movieListView_MouseDoubleClick" SelectionChanged="movieListView_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="150" Header="Title" DisplayMemberBinding="{Binding Title}"></GridViewColumn>
                     <GridViewColumn Width="100" Header="Genre" DisplayMemberBinding="{Binding Genre}"></GridViewColumn>
                     <GridViewColumn Width="100" Header="Review Score" DisplayMemberBinding="{Binding ReviewScore}"></GridViewColumn>
+                    <GridViewColumn Width="100" Header="Director" DisplayMemberBinding="{Binding Director}"></GridViewColumn>
+                    <GridViewColumn Width="100" Header="Duration(mins)" DisplayMemberBinding="{Binding Length}"></GridViewColumn>
+                    <GridViewColumn Width="100" Header="Amount Of Actors" DisplayMemberBinding="{Binding NumberOfActors}"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
+        <TextBox x:Name="directorTextBox" HorizontalAlignment="Left" Height="23" Margin="309,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" />
+        <TextBox x:Name="numberOfActorsTextBox" HorizontalAlignment="Left" Height="23" Margin="511,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99"/>
+        <TextBox x:Name="lengthTextBox" HorizontalAlignment="Left" Height="23" Margin="412,343,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
+        <Label x:Name="Director" Content="Director" HorizontalAlignment="Left" Margin="335,321,0,0" VerticalAlignment="Top" Height="22" Width="50" FontSize="10"/>
+        <Label x:Name="Length" Content="Length" HorizontalAlignment="Left" Margin="437,322,0,0" VerticalAlignment="Top" FontSize="10"/>
+        <Label x:Name="Number_Of_Actors" Content="Number Of Actors" HorizontalAlignment="Left" Margin="515,323,0,0" VerticalAlignment="Top" FontSize="10"/>
 
     </Grid>
 </Window>
