@@ -7,10 +7,11 @@ using System.Windows;
 
 namespace InheritanceIntro
 {
-    public class Dog
+    public class Dog : Animal
     {
-        public string Name;
-        public int Height;
+        //Inherited From Animal
+        //public string Name;
+        //public int Height;
         public string Breed;
 
         public void Bark()
@@ -18,10 +19,11 @@ namespace InheritanceIntro
             MessageBox.Show("Bark");
         }
 
-        public void SayName()
-        {
-            MessageBox.Show("My name is " + this.Name);
-        }
+        //Inherited From Animal.
+        // public void SayName()
+        //{
+          //  MessageBox.Show("My name is " + this.Name);
+        //}
 
         public Dog() { }
 
