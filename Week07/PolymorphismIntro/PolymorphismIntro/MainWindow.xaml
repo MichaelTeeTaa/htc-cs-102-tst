@@ -13,6 +13,7 @@
                 <GridView>
                     <GridViewColumn Width="150" Header="Name" DisplayMemberBinding="{Binding Name}"/>
                     <GridViewColumn Width="150" Header="Height" DisplayMemberBinding="{Binding Height}"/>
+                    <GridViewColumn Width="150" Header="Weight (g)" DisplayMemberBinding="{Binding Weight}"/>
                 </GridView>
             </ListView.View>
         </ListView>
