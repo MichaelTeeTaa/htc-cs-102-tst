@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace PolymorphismIntro
 {
-    public class Dog : Animal
+    public class Dog : Animal, IMammal
     {
         public string Breed;
 
