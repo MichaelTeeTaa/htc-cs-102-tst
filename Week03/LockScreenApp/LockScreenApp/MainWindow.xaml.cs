@@ -22,6 +22,7 @@ namespace LockScreenApp
 
     {
         private List<int> passcode = new List<int>();
+        Boolean creatingPin = true;
         public MainWindow()
         {
             InitializeComponent();
@@ -34,11 +35,24 @@ namespace LockScreenApp
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            if (progressBar.Value == 100)
+            if (creatingPin == true && passcode.Count == 4) 
+            {
+                textBox.Text = "Enter your PIN";
+                creatingPin = false;
+            }
+            
+                
+           else if (progressBar.Value == 100)
+            {
+                progressBar.Value = 0;
+
+
+            }
+            else if (passcode.Count == 4)
             {
 
-                
             }
+           
             else
             {
                 progressBar.Value += 25;
@@ -63,7 +77,7 @@ namespace LockScreenApp
         {
             if (progressBar.Value == 100)
             {
-
+                progressBar.Value = 0;
 
             }
             else 
@@ -78,7 +92,7 @@ namespace LockScreenApp
         {
             if (progressBar.Value == 100)
             {
-
+                progressBar.Value = 0;
 
             }
             else
@@ -93,7 +107,7 @@ namespace LockScreenApp
         {
             if (progressBar.Value == 100)
             {
-
+                progressBar.Value = 0;
 
             }
             else
@@ -108,7 +122,7 @@ namespace LockScreenApp
         {
             if (progressBar.Value == 100)
             {
-
+                progressBar.Value = 0;
 
             }
             else
@@ -123,7 +137,7 @@ namespace LockScreenApp
         {
             if (progressBar.Value == 100)
             {
-
+                progressBar.Value = 0;
 
             }
             else
@@ -138,7 +152,7 @@ namespace LockScreenApp
         {
             if (progressBar.Value == 100)
             {
-
+                progressBar.Value = 0;
 
             }
             else
@@ -152,7 +166,7 @@ namespace LockScreenApp
         {
             if (progressBar.Value == 100)
             {
-
+                progressBar.Value = 0;
 
             }
             else
@@ -166,7 +180,7 @@ namespace LockScreenApp
         {
             if (progressBar.Value == 100)
             {
-
+                progressBar.Value = 0;
 
             }
             else
@@ -180,7 +194,7 @@ namespace LockScreenApp
         {
             if (progressBar.Value == 100)
             {
-
+                progressBar.Value = 0;
 
             }
             else
